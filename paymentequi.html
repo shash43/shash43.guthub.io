@@ -1,0 +1,309 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/projects/bootstrap.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+ <link rel="stylesheet" href="signup1.css">
+   <script language="javascript">
+
+  
+        function verify() {
+
+    
+
+        
+
+
+
+
+            if (document.form1.equ.value== "") {
+                alert("Please select a equipment");
+                document.form1.equ.focus();
+                return false;
+            }
+
+            if (document.form1.brand.value== "") {
+                alert("Please select a brand.");
+                document.form1.brand.focus();
+                return false;
+            }
+
+            if (document.form1.size.value== "") {
+                alert("Please select a size.");
+                document.form1.size.focus();
+                return false;
+            }
+ 
+            if (document.form1.quan.value == "") {
+                alert("Please give quantity");
+                document.form1.quan.focus();
+                return false;
+            }
+
+            if (document.form1.pay.value== "") {
+                alert("Please select a payment method.");
+                document.form1.pay.focus();
+                return false;
+            }
+
+        
+ 
+
+ 
+
+            if (document.form1.u_name.value == "") {
+                alert("Please give username");
+                document.form1.u_name.focus();
+                return false;
+            }
+
+
+            if (document.form1.pass.value == "") {
+                alert("Please give Password");
+                document.form1.pass.focus();
+                return false;
+            }
+
+
+
+            if (document.form1.pass.value.length < 6) {
+                alert("Please give a Password more than 5 characters");
+                document.form1.pass.focus();
+                return false;
+            }
+return true;
+}
+
+
+  
+    </script>
+  </head>
+  <title> Cricket- My Life </title>
+<body>
+<div class="header">
+      <div class="container">
+      <div align="left">
+        <img src="icon.jpg" width="200" height="135">
+      </div>
+      </div>
+</div>
+<center>
+  <font face="Bedrock" color="yellow">
+    <div class="header">
+      <div class="container">
+           <h1> CRICKET-THE GENTLEMAN'S GAME</h1>
+      </div>
+    </div>
+  </font>
+</center>
+
+    <div class="header">
+      <div class="container">
+            <div class="nav">
+                 <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="equipment.html">Equipments</a></li>
+                    <li><a href="bats.html">Bats & Balls</a></li>
+    <li><a href="jerseys.html">Jerseys</a></li>
+    <li><a href="signup.html">Signup</a></li>
+<li><a href="payment.html">Payment</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+      </div>
+    </div>
+   </body>
+    <div class="jumbotron">
+        <div class="container">
+             <div class="nav">
+<form method="POST" action="validated1.html" name="form1">
+
+    <!-- Creating Table, having 11rows and 2 columns. -->
+    <table border="2" align="center" cellpadding="7">
+
+        <!-- Start First Row -->
+   <tr>
+            <td><strong>Equipment:</strong></td>
+            <td>
+                <!-- Combo Box -->
+                <select name="equ"/>
+                <option value="" selected/>
+                --Select--
+<option value=" Abdomen guard"/>
+          Abdomen guard
+<option value="Arm Guard"/>
+Arm Guard
+<option value="Batting Pads"/>
+Batting Pads
+<option value=" White T-shirt"/>
+           White T-shirt
+<option value="Helmet"/>
+Helmet
+<option value="Keeping Gloves"/>
+Keeping Gloves
+<option value=" Kepping inners"/>
+           Kepping inners
+<option value="Keeping Pads"/>
+Keeping Pads
+<option value="Shoes"/>
+Shoes
+<option value=" Stumps"/>
+          Stumps
+<option value="Thigh Pads"/>
+
+
+                </select>
+            </td>
+        </tr>
+
+          <tr>
+            <td><strong>Brand:</strong></td>
+            <td>
+                <!-- Combo Box -->
+                <select name="brand"/>
+                <option value="" selected/>
+                --Select--
+<option value=" Gunn and Moore"/>
+          Gunn and Moore
+<option value="Kokaburra"/>
+Kokaburra
+<option value="New Balance"/>
+New Balance
+<option value="Puma"/>
+           Puma
+<option value="Slazenger"/>
+Slazenger
+<option value="Spartan"/>
+Spartan
+<option value=" Mongoose"/>
+           Mongoose
+<option value="Reebok"/>
+Reebok
+<option value="Addidas"/>
+Addidas
+<option value=" Gray Nicolis"/>
+          Gray Nicolis
+<option value="MRF"/>
+MRF
+<option value="Nike"/>
+Nike
+<option value="Dukesl"/>
+Dukes
+<option value="SG"/>
+SG 
+<option value="SS"/>
+SS
+
+                </select>
+            </td>
+        </tr>
+   <tr>
+            <td><strong>Size:</strong></td>
+            <td>
+                <!-- Combo Box -->
+                <select name="size"/>
+                <option value="" selected/>
+                --Select--
+<option value="1"/>
+         1
+<option value="2"/>
+2
+<option value="3"/>
+3
+<option value="4"/>
+           4
+<option value="5"/>
+5
+<option value="6"/>
+6
+<option value="7"/>
+           7
+<option value="8"/>
+8
+<option value="9"/>
+9
+<option value="10"/>
+          10
+<option value="11"/>
+11
+<option value="12"/>
+12
+
+                </select>
+            </td>
+        </tr>
+<tr>
+            <td><strong>Quantity:</strong></td>
+            <td>
+
+                <!-- Textbox -->
+                <input type="text" name="quan"/>
+            </td>
+        </tr>
+        <tr>
+            <td><strong>Payment:</strong></td>
+            <td>
+                <!-- Combo Box -->
+                <select name="pay"/>
+                <option value="" selected/>
+                --Select--
+<option value=" Cash on delivery"/>
+           Cash on delivery
+<option value="Credit Card on delivery"/>
+Credit Card on delivery
+<option value="Epayment on delivery"/>
+Epayment on delivery
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td><strong>Username:</strong></td>
+            <td>
+
+                <!-- Textbox -->
+                <input type="text" name="u_name"/>
+            </td>
+        </tr>
+
+        <tr>
+            <td><strong>Password:</strong></td>
+            <td>
+                <!-- Password Field -->
+                <input type="password" name="pass"/>
+            </td>
+        </tr>
+
+     
+
+        <tr align="center">
+
+            <td>
+                <!--Submit Button, Function verify need to be called when we process
+                submit button-->
+                <input type="submit" value="Submit" onClick="return (verify());"/>
+            </td>
+
+            <td>
+                <!--Reset Button-->
+                <input type="reset">
+            </td>
+        </tr>
+
+        <!--Table Close-->
+    </table>
+
+    <!--Form Close -->
+   </form>
+        </div>
+      </div>
+    </div>
+
+
+
+    
+  </body>
+</html>

@@ -1,0 +1,373 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/projects/bootstrap.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+ <link rel="stylesheet" href="signup1.css">
+   <script language="javascript">
+
+  
+        function verify() {
+
+    
+
+            if (document.form1.name.value == "") {
+                alert("Please give the name");
+                document.form1.name.focus();
+                return false;
+            }
+
+
+            if (document.form1.email.value == "") {
+                alert("Please give the email");
+                return false;
+            }
+
+
+            if (document.form1.age.value == "") {
+                alert("Please give age");
+                document.form1.age.focus();
+                return false;
+            }
+
+    
+
+            if (document.form1.age.value < 18 || document.form1.age.value > 60) {
+                alert("Please give Age range between 18 and 60");
+                document.form1.age.focus();
+                return false;
+            }
+
+    if (document.form1.number.value="") {
+                alert("Please Enter a valid contact Number");
+                document.form1.number.focus();
+                return false;
+            }
+
+            if (document.form1.gender[0].checked == false &&
+                    document.form1.gender[1].checked == false) {
+                alert("Please select gender");
+                document.form1.gender.focus();
+                return false;
+            }
+
+
+            if (document.form1.saut.state== "") {
+                alert("Please give state or union territoy");
+                document.form1.saut.focus();
+                return false;
+            }
+
+            if (document.form1.zip.value == "") {
+                alert("Please give Zip Code");
+                document.form1.zip.focus();
+                return false;
+            }
+
+
+ 
+
+            if (document.form1.myaddress.value == "") {
+                alert("Please give address");
+                document.form1.myaddress.focus();
+                return false;
+            }
+
+   
+
+            if (document.form1.u_name.value == "") {
+                alert("Please give username");
+                document.form1.u_name.focus();
+                return false;
+            }
+
+
+            if (document.form1.pass.value == "") {
+                alert("Please give Password");
+                document.form1.pass.focus();
+                return false;
+            }
+
+
+
+            if (document.form1.pass.value.length < 6) {
+                alert("Please give a Password more than 5 characters");
+                document.form1.pass.focus();
+                return false;
+            }
+
+
+
+            if (document.form1.r_pass.value == "") {
+                alert("Please retype your password");
+                document.form1.r_pass.focus();
+                return false;
+            }
+
+
+            if ((document.form1.pass.value) != (document.form1.r_pass.value)) {
+                alert("Your password does not match");
+                document.form1.r_pass.value == "";
+                document.form1.r_pass.focus();
+                return false;
+            }
+            return true;
+        }
+    </script>
+  </head>
+  <title> Cricket- My Life </title>
+<body>
+
+<div class="header">
+      <div class="container">
+      <div align="left">
+        <img src="icon.jpg" width="200" height="135">
+      </div>
+      </div>
+</div>
+<center>
+  <font face="Bedrock" color="yellow">
+    <div class="header">
+      <div class="container">
+           <h1> CRICKET-THE GENTLEMAN'S GAME</h1>
+      </div>
+    </div>
+  </font>
+</center>
+    <div class="header">
+      <div class="container">
+            <div class="nav">
+                 <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="equipment.html">Equipments</a></li>
+                    <li><a href="bats.html">Bats & Balls</a></li>
+    <li><a href="jerseys.html">Jerseys</a></li>
+    <li><a href="signup.html">Signup</a></li>
+<li><a href="payment.html">Payment</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+      </div>
+    </div>
+   </body>
+    <div class="jumbotron">
+        <div class="container">
+             <div class="nav">
+
+<form method="POST" action="validated.html" name="form1">
+
+    <!-- Creating Table, having 11rows and 2 columns. -->
+    <table border="2" align="center" cellpadding="15" cellspacing="15" bordercolor="white">
+
+        <!-- Start First Row -->
+        <tr>
+            <!-- Creating First Column -->
+            <td><strong>Name:</strong></td>
+
+            <!-- Creating Second Columns -->
+            <td>
+                <!-- TextBox -->
+                <input type="text" name="name"/>
+            </td>
+            <!-- Close First Row -->
+        </tr>
+
+        <!-- Creting First Columns -->
+        <td><strong>Email:</strong></td>
+
+        <!-- Creating Second Columns -->
+        <td>
+            <!-- Textbox -->
+            <input type="text" name="email"/>
+        </td>
+        <!-- Close Second row -->
+        </tr>
+
+        <tr>
+            <td><strong>Age:</strong></td>
+            <td>
+                <!-- Textbox -->
+                <input type="text" name="age" size="2"/>
+            </td>
+        </tr>
+        <tr>
+            <td><strong>Contact Number:</strong></td>
+            <td>
+                <!-- Textbox -->
+                <input type="text" name="number" />
+            </td>
+        </tr>
+
+        <tr>
+            <td><strong>Gender:</strong></td>
+            <td>
+                <!-- Radio Button -->
+                <input type="radio" name="gender" value="Male"/>Male
+                <input type="radio" name="gender" value="Female"/>Female
+
+            </td>
+        </tr>
+
+
+        <tr>
+            <td><strong>State or Union Territory:</strong></td>
+            <td>
+                <!-- Combo Box -->
+                <select name="saut"/>
+                <option value="" selected/>
+                --Select--
+<option value=" Andra Pradesh"/>
+           Andra Pradesh
+
+<option value="Arunachal Pradesh"/>
+Arunachal Pradesh
+<option value="Assam"/>
+Assam
+<option value="Bihar"/>
+Bihar
+<option value="Chhattisgarh"/>
+Chhattisgarh
+<option value="Goa"/>
+Goa
+<option value="Gujarat"/>
+Gujarat
+<option value="Haryana"/>
+Haryana
+<option value="Himachal Pradesh"/>
+Himachal Pradesh
+<option value="Jammu and Kashmir"/>
+Jammu and Kashmir
+<option value="Jharkhand"/>
+Jharkhand
+<option value="Karnataka"/>
+Karnataka
+<option value="Kerala"/>
+Kerala
+<option value="Madya Pradesh"/>
+Madya Pradesh
+<option value="Maharashtra"/>
+Maharashtra
+<option value="Manipur"/>
+Manipur
+<option value="Meghalaya"/>
+Meghalaya
+<option value="Mizoram"/>
+Mizoram
+<option value="Nagaland"/>
+Nagaland
+<option value="Orissa"/>
+Orissa
+<option value="Punjab"/>
+Punjab
+<option value="Rajasthan"/>
+Rajasthan
+<option value="Sikkim"/>
+Sikkim
+<option value="Tamil Nadu"/>
+Tamil Nadu
+<option value="Telangana"/>
+Telangana
+<option value="Tripura"/>
+Tripura
+<option value="Uttaranchal"/>
+Uttaranchal
+<option value="Uttar Pradesh"/>
+Uttar Pradesh
+<option value="West Bengal"/>
+West Bengal
+<option value="Andaman and Nicobar Islands"/>
+Andaman and Nicobar Islands
+<option value="Port Blair"/>
+Port Blair
+<option value="Chandigarh"/>
+Chandigarh
+<option value="Dadar and Nagar Haveli"/>
+Dadar and Nagar Haveli
+<option value="Silvassa"/>
+Silvassa
+<option value="Daman and Diu"/>
+Daman and Diu
+<option value="Daman"/>
+Daman
+<option value="Delhi"/>
+Delhi
+<option value="Lakshadeep"/>
+Lakshadeep
+<option value="Kavaratti"/>
+Kavaratti
+<option value="Pondicherry"/>
+Pondicherry
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><strong>Zip Code:</strong></td>
+            <td>
+                <!-- Textbox -->
+                <input type="text" name="zip" />
+            </td>
+        </tr>
+        <tr>
+            <td><strong>Address:</strong></td>
+            <td>
+                <!-- TextArea -->
+                <textarea rows="5" cols="20" name="myaddress"/></textarea>
+            </td>
+        </tr>
+
+        <tr>
+            <td><strong>Username:</strong></td>
+            <td>
+
+                <!-- Textbox -->
+                <input type="text" name="u_name"/>
+            </td>
+        </tr>
+
+        <tr>
+            <td><strong>Password:</strong></td>
+            <td>
+                <!-- Password Field -->
+                <input type="password" name="pass"/>
+            </td>
+        </tr>
+
+        <tr>
+            <td><strong>Retype Password:</strong></td>
+            <td>
+                <!-- Password Field -->
+                <input type="password" name="r_pass"/>
+            </td>
+        </tr>
+
+        <tr align="center">
+
+            <td>
+                <!--Submit Button, Function verify need to be called when we process
+                submit button-->
+                <input type="submit" value="Submit" onClick="return (verify());"/>
+            </td>
+
+            <td>
+                <!--Reset Button-->
+                <input type="reset">
+            </td>
+        </tr>
+
+        <!--Table Close-->
+    </table>
+
+    <!--Form Close -->
+   </form>
+        </div>
+      </div>
+    </div>
+
+
+
+    
+  </body>
+</html>
